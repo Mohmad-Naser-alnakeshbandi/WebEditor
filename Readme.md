@@ -2,7 +2,7 @@
 
 <img src="Programmer.gif" alt="vscode-gif" width="100%">
 
-##  I set up this site to test my code or ideas as quickly as possible without spending time setting up Vs code or any other development environment.
+##  I set up this website to test my code or ideas as quickly as possible without spending time setting up Vs code or any other development environment.
 
 <br>
 
