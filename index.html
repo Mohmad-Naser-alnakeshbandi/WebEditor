@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="/style.css">
+    <title>Web-Editor</title>
+  </head>
+  <body>
+  <header>
+    <h1>Web Editor</h1>
+  </header>
+
+    <div class="buttons">
+      <button onclick="desktop_view()"  title="Desktop view" ><i class="fas fa-desktop"></i></button>
+      <button onclick="mobile_view()"   title="mobile view"  ><i class="fas fa-mobile-alt"></i></button>
+      <button onclick="tablet_view()"   title="Tablet view" ><i class="fas fa-tablet-alt"></i></button>
+      <button onclick="code_copy()"     title="Copy the Code" ><i class="fas fa-copy"></i></button>
+      <button onclick="Run()"           title="Run the Code">Run</button>
+    </div>
+    <textarea name="" id="code" ></textarea>
+    <div class="resut">
+      <iframe   id=output frameborder="1"></iframe>
+    </div>
+
+
+    <script type="text/javascript" src="/App.js" ></script>
+    <script src="https://kit.fontawesome.com/f5e251485b.js" crossorigin="anonymous"></script>
+  </body>
+</html>
+
