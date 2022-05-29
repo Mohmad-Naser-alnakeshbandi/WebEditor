@@ -1,6 +1,7 @@
 # Web Editor
-
+<p align="center">
 <img src="Programmer.gif" alt="vscode-gif" width="100%">
+</p>
 
 ##  I set up this website to test my code or ideas as quickly as possible without spending time setting up Vs code or any other development environment.
 
@@ -8,7 +9,11 @@
 
 ## However, for complex projects you need a development environment like our lover Vs code
 <br>
-<img  src="vsCode.gif" alt="vscode-gif" width="100%">
+
+<p align="center">
+    <img  src="vsCode.gif" alt="vscode-gif" width="100%">
+</p>
+
 <br>
 
 ## Example: 
@@ -75,5 +80,8 @@ Happy Hack;)
 
 <br>
 
-<img  src="Happy%20Hack.gif" alt="vscode-gif" width="100%">
+<p align="center">
+    <img  src="Happy%20Hack.gif" alt="vscode-gif" width="100%">
+</p>
+
 <br>
