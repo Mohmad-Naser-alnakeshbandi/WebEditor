@@ -5,7 +5,7 @@ $(document).ready(function () {
   $("#code-tabs").tabs();
 
   $("#preview-tabs").tabs();
-  PreviewTabColor(0);
+  PreviewTabColor(1);
 
   var width = document.getElementById("if-desktop").getBoundingClientRect().width;
   document.getElementById("if-desktop").style.height = (width * (10 / 16)) + "px";
@@ -170,44 +170,6 @@ function copy_color() {
   navigator.clipboard.writeText(colorInput);
 }
 
-let fileHandle;
-const pickerOpts = {
-  types: [
-    {
-      description: 'File',
-      accept: {
-        'File/*': '.html'
-      }
-    },
-  ],
-  excludeAcceptAllOption: true,
-  multiple: false
-};
-
-async function upload_file() {
-  [fileHandle] = await window.showOpenFilePicker(pickerOpts);
-  let File = await fileHandle.getFile();
-  let FileData = await File.text();
-  document.getElementById("editing-html").value = FileData;
-  update(FileData);
-  Run();
-}
-
-
-async function download() {
-  fileHandle = await window.showSaveFilePicker(pickerOpts);
-  let stream = await fileHandle.createWritable();
-  await stream.write(document.getElementById("editing-html").value);
-  await stream.close();
-  Swal.fire(
-    {
-      title: "Download",
-      icon: "success",
-      animation: true,
-      showConfirmButton: false,
-      timer: 1200
-    });
-}
 
 function save_browser() {
   Code = document.getElementById("editing-html").value;
@@ -229,7 +191,7 @@ function load_code() {
 
 function impressum(){
   Swal.fire({
-    title: "<h1>Impressum</h1>", 
+    title: "<h1 id='titel'>Impressum</h1>", 
     html: "<div class='impressum'><h3>WebEditor</h3><p id='gray-color'>Angaben gemäß § 5 TMG </p><p>Anschrift: <b>Mohamad Naser Alnakeshbandi</b></p><p> Yorkstraße 13   <br> 75177 Pforzheim <br> </p><p>Telefon: +49 15164657673 </br>E-Mail: <a href='mailto:mhmdn1381@gmail.com'>mhmdn1381@gmail.com</a></p></div>",  
     confirmButtonText: "close", 
   });
@@ -237,14 +199,14 @@ function impressum(){
 
 function support(){
   Swal.fire({
-    title: "<h1>Help</h1>", 
+    title: "<h1id='titel'>Help</h1>", 
     html: "<div id='dialog'<p>Press F2 to generate a Code template</p><p><i class='fas fa-play'></i> Run code</p><p><i class='fa-solid fa-copy'></i> Copy code</p><p><i class='fas fa-palette'></i> Select a color</p><p><i class='fas fa-trash-alt'></i> Delete code</p><p><i class='fa-solid fas fa-bookmark'></i> Save code in the browser</p><p><i class='fas fa-upload'></i> Upload code</p><p><i class='fa-solid fa-download'></i> Download code</p> </div>",  
     confirmButtonText: "close", 
   });
 }
 function copy_picker(){
   Swal.fire({
-    title: "<h1 id='color-titel'>Color picker</h1>", 
+    title: "<h1 id='titel'>Color picker</h1>", 
     html: "<div id='color_dialog' title='Color dialog'><input type='color' name='' id='color' /> <button onclick='copy_color()'>Copy Color Code</button></div>    ",  
     showConfirmButton: false,
   });
