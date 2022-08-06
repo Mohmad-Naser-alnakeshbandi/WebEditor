@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../Style/Error.css">
+    <title>Error</title>
+</head>
+<body>
+    <div class="wrap">
+        <div class="404">
+          <pre><code>
+            (<span class="blue">function</span>( inDevelopment ){
+                 <span class="blue">function</span> launch() {
+                    <span class="blue">if</span>( inDevelopment.Browser =="FireFox" ) {
+                        <span class="blue">return <span class="error">Error(403)</span></span>;
+                    }
+                    <span class="comment">//Problem : unsupported Browser</span>
+                    <span class="comment">//Solution: Use another Browser</span>
+                    <span class="comment">//Such as Chrome or Microsoft Edge</span>
+              }
+            window.addEventListner( <span class="load">'load'</span>, launch );
+            }( <span class="blue">true</span> ));
+          </code></pre>
+        </div>
+      </div>
+</body>
+</html>

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="./JS/jquery-3.6.0.js" defer></script>
+    <script src="./JS/jquery-ui.js" defer></script>
+    <script src="./JS/kit.fontawsome.js" crossorigin="anonymous" defer></script>
+    <script src="./JS/sweetalert.js" defer></script>
+    <script src="./JS/prism.js" defer></script>
+    <script type="text/javascript" src="./JS/editor.js" defer></script>
+    <link rel="stylesheet" href="./Style/index.css" />
+    <link rel="stylesheet" href="./Style/juqery-ui.css" />
+    <link rel="icon" type="image/x-icon" href="./img/favicon.ico" />
+    <title>WebEditor</title>
+  </head>
+
+  <body onload="load_code()">
+    <header>
+      <h1>WebEditor</h1>
+      <button id="switch" onclick="ColorChange()">
+        <i class="fa-solid fa-moon fa-2xl"></i>
+      </button>
+    </header>
+    <main>
+      <div>
+        <div class="button-area">
+          <button class="select-button" id="b-html">
+            Code <i class="fa-solid fa-code fa-2x1"></i>
+          </button>
+
+          <div></div>
+
+          <button class="b-action" id="run" title="Run" onclick="Run()">
+            <i class="fa-solid fa-play fa-2xl"></i>
+          </button>
+          <button class="b-action" id="copy" title="Copy" onclick="code_copy()">
+            <i class="fa-solid fa-copy fa-2xl"></i>
+          </button>
+          <button
+            class="b-action"
+            id="color_picker"
+            title="Color picker"
+            onclick=" copy_picker()"
+          >
+            <i class="fas fa-palette fa-2xl"></i>
+          </button>
+          <button
+            class="b-action"
+            id="delete"
+            title="Delete"
+            onclick=" code_delete()"
+          >
+            <i class="fas fa-trash-alt fa-2xl"></i>
+          </button>
+          <button
+            class="b-action"
+            id="save"
+            title="Save in the browser"
+            onclick="save_browser()"
+          >
+            <i class="fa-solid fas fa-bookmark fa-2xl"></i>
+          </button>
+
+          <button
+            class="b-action"
+            id="upload_color"
+            title="import File"
+            onclick=" upload_file()"
+          >
+            <i class="fas fa-upload fa-2xl"></i>
+          </button>
+          <button
+            class="b-action"
+            id="download"
+            title="download Code"
+            onclick="download()"
+          >
+            <i class="fa-solid fa-download fa-2xl"></i>
+          </button>
+          <button
+            class="b-action"
+            id="support"
+            title="Support"
+            onclick="support()"
+          >
+            <i class="fas fa-question-circle fa-2xl"></i>
+          </button>
+        </div>
+        <div id="code-tabs">
+          <ul>
+            <li><a href="#tab-html"></a></li>
+          </ul>
+          <div id="tab-html">
+            <textarea
+              placeholder="Enter your Code"
+              id="editing-html"
+              spellcheck="false"
+              oninput="update(this.value); sync_scroll(this); Run() "
+              onscroll="sync_scroll(this);"
+              onkeydown="check_tab(this, event);"
+            ></textarea>
+            <pre id="highlighting" aria-hidden="true">
+                        <code class="language-html" id="highlighting-content"></code>
+                    </pre>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="button-area">
+          <button class="select-button" id="b-mobile">Mobile</button>
+          <button class="select-button" id="b-desktop">Desktop</button>
+          <button class="select-button" id="b-tablet">Tablet</button>
+        </div>
+        <div id="preview-tabs">
+          <ul>
+            <li><a href="#tab-desktop"></a></li>
+            <li><a href="#tab-mobile"></a></li>
+            <li><a href="#tab-tablet"></a></li>
+          </ul>
+          <div id="tab-desktop">
+            <iframe id="if-desktop" title="Desktop preview embed"></iframe>
+          </div>
+          <div id="tab-mobile">
+            <iframe id="if-mobile" title="Mobile preview embed"></iframe>
+          </div>
+          <div id="tab-tablet">
+            <iframe id="if-tablet" title="Tablet preview embed"></iframe>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <p onclick="impressum()">Mohamad Naser Alnakeshbandi</p>
+    </footer>
+  </body>
+</html>

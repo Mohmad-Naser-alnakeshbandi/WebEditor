@@ -1,0 +1,64 @@
+@font-face {
+    font-family: 'mononokiBold';
+        src: url('/assets/fonts/mononoki/c6c2e916603aca6789be066206e52d8c/d1a7175bb51f07fc5282852b2c452138/mononokiBold.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+      }
+
+@font-face {
+    font-family: 'mononokiBoldItalic';
+        src: url('/assets/fonts/mononoki/c6c2e916603aca6789be066206e52d8c/e14bac2d5a122a6bc8eba1b9258639d5/mononokiBoldItalic.ttf') format('truetype');
+    font-weight: bold;
+    font-style: italic;
+      }
+
+@font-face {
+    font-family: 'mononokiItalic';
+        src: url('/assets/fonts/mononoki/c6c2e916603aca6789be066206e52d8c/5e73d039a07705b64675b6d0b575b872/mononokiItalic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+      }
+
+@font-face {
+    font-family: 'mononokiRegular';
+        src: url('/assets/fonts/mononoki/c6c2e916603aca6789be066206e52d8c/fe86ddcdce40bb3c55e01897e56a8a65/mononokiRegular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+      }
+
+ /* The following rules are deprecated. */ 
+
+@font-face {
+    font-family: 'mononoki';
+        src: url('/assets/fonts/mononoki/c6c2e916603aca6789be066206e52d8c/d1a7175bb51f07fc5282852b2c452138/mononokiBold.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+      }
+
+
+
+@font-face {
+    font-family: 'mononoki';
+        src: url('/assets/fonts/mononoki/c6c2e916603aca6789be066206e52d8c/e14bac2d5a122a6bc8eba1b9258639d5/mononokiBoldItalic.ttf') format('truetype');
+    font-weight: bold;
+    font-style: italic;
+      }
+
+
+
+@font-face {
+    font-family: 'mononoki';
+        src: url('/assets/fonts/mononoki/c6c2e916603aca6789be066206e52d8c/5e73d039a07705b64675b6d0b575b872/mononokiItalic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+      }
+
+
+
+@font-face {
+    font-family: 'mononoki';
+        src: url('/assets/fonts/mononoki/c6c2e916603aca6789be066206e52d8c/fe86ddcdce40bb3c55e01897e56a8a65/mononokiRegular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+      }
+
