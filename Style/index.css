@@ -5,6 +5,7 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    
 }
 
 body {
@@ -120,7 +121,7 @@ main div:last-child {
     border: none;
     color: white;
     padding: 1.8%;
-    min-width: 20%;
+    min-width: 33.34%;
     width: auto;
     text-align: center;
 }
@@ -133,7 +134,7 @@ main div:last-child {
     justify-content: space-between;
     background: #1E1E1E;
     border: none;
-    border-radius: 0px 10px 10px 10px;
+    border-radius: 0px 0px 10px 10px;
     margin-bottom: 5%;
 
 }
@@ -439,7 +440,7 @@ iframe {
 .impressum p {
     margin-bottom: 12px;
 }
-@media (max-width: 480px) {
+@media (max-width: 800px) {
   
     main {
         display: flex;
@@ -447,13 +448,12 @@ iframe {
         align-items: stretch;
         margin-top: 1%;
         margin-bottom: 12px;
-     
+        max-width: 100%;
+        overflow-x: hidden;
     }
     header h1{
         padding-left: 20px;
         padding-top: 2px;
-
-      
     }
 
     .b-action {
@@ -462,11 +462,9 @@ iframe {
         color: white;
         font-size: 10px;
         min-width: 9%;
-
     }
     #color_dialog {
         flex-direction: column;
-   
     }
     #color{
         width: 100%; 
@@ -478,10 +476,19 @@ iframe {
     #color-titel{
         font-size: 24px;
     }
-    #upload,
-    #download,
+    #if-desktop,
+    #if-tablet,
     #b-desktop,
     #b-tablet{
         visibility: hidden;
     }
+    #if-desktop,
+    #if-tablet{
+        width: 20px;
+    }   
+    .select-button{
+        visibility: visible;
+        min-width: 40%;
+    }
+    
 }

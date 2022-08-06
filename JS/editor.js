@@ -8,6 +8,7 @@ $(document).ready(function () {
   PreviewTabColor(1);
 
   var width = document.getElementById("if-desktop").getBoundingClientRect().width;
+  
   document.getElementById("if-desktop").style.height = (width * (10 / 16)) + "px";
 
   $("#b-html").click(function () {
@@ -169,6 +170,7 @@ function copy_color() {
   let colorInput = document.querySelector('#color').value;
   navigator.clipboard.writeText(colorInput);
 }
+
 
 
 function save_browser() {
